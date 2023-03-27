@@ -1,6 +1,16 @@
 # h0 Sieppari ruispellossa
 *First test or kind of like a pre-test to analyze network traffic*
 
+`I used Debian 11, Lenovo Thinkpad E15`
+```bash
+~$ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Debian
+Description:	Debian GNU/Linux 11 (bullseye)
+Release:	11
+Codename:	bullseye
+```
+---
 **Sieppaa ja analysoi verkkoliikennettä.**
 
 First i installed `tcpdump`
