@@ -60,6 +60,7 @@ While these were successful tasks, the story continued to another assignment, th
 
 I highly recommend the episode to anyone interested about Social Engineering!
 
+---
 ### a) Asenna Kali virtuaalikoneeseen
 
 Ive had Kali Linux installed in VirtualBox and directly to hardware, for while, i think 2021.4 originally, and im using the VirtualBox one, for these assignments:
@@ -181,6 +182,7 @@ will work anyway!
 
 *Of course one can remove the `provisioning` from the Vagrant file and use the `vagrant` user if wanting to!*
 
+---
 ### b) Asenna Metasploitable 2 virtuaalikoneeseen
 
 So to install Metasploitable 2 to VirtualBox, i started by downloading the Metasploitable2 package:   
@@ -203,6 +205,7 @@ Use an existing virtual hard disk file: Metasploitable.vmdk
 
 After it was created, i didnt boot it up yet, but proceeded to the next assignment.
 
+---
 ### c) Tee koneille virtuaaliverkko, jossa:
 -   Kali saa yhteyden Internettiin, mutta sen voi laittaa pois päältä.
 -   Kalin ja Metasploitablen välillä on host-only network, niin että porttiskannatessa ym. koneet on eristetty intenetistä, mutta ne saavat yhteyden toisiinsa.
@@ -235,6 +238,7 @@ Now as ive configured the DHCP in previous step, they both get IP address from s
 
 **Profit!**
 
+---
 ### d) Etsi Metasploitable porttiskannaamalla (db_nmap -sn). Tarkista selaimella, että löysit oikean IP:n - Metasploitablen etusivulla lukee Metasploitable.
 
 I booted up both virtual machines first.  
@@ -316,6 +320,7 @@ Ok to speed things up, i knew .1 is the DHCP Server and .2 is my own. So i went 
 ```
 I proceeded to next assignment.
 
+---
 ### e) Porttiskannaa Metasploitable huolellisesti (db_nmap -A)
 
 Continuing straight from previous assignment, i did a deeper scan to found host `192.168.66.4` and saved the output to file `4`
@@ -351,6 +356,7 @@ host          port   proto  name         state  info
 
 So theres `vsftpd` service running in `port 21` in address `192.168.66.4`
 
+---
 ### f) Murtaudu Metasploitablen VsFtpd-palveluun Metasploitilla (search vsftpd, use 0, set RHOSTS - varmista osoite huolella, exploit, id)
 
 Now after finding out the address, port and service, i proceeded to breaking in!   
@@ -444,6 +450,7 @@ I took the password hashes from `/etc/shadow` to go so they could be tried to cr
 cat /etc/shadow
 ```
 
+---
 ### n) Vapaaehtoinen: Murtaudu johonkin toiseen Metasploitablen palveluun.
 
 For this, as it was an optional task, i did a quick password cracking practice.  
@@ -534,6 +541,7 @@ $1$kR3ue7JZ$7GxELDupr5Ohp6cjZ3Bu//:service
 
 *Il be doing more attacks later, but dont know if i have time to report everything.*
 
+---
 ### m) Vapaaehtoinen, vaikea: Asenna ja korkkaa Metasploitable 3. Karvinen 2018: [Install Metasploitable 3 – Vulnerable Target Computer](https://terokarvinen.com/2018/install-metasploitable-3-vulnerable-target-computer/)
 
 This i started pretty straight forward with the help of article above from Tero and [Github: Rapid7](https://github.com/rapid7/metasploit-framework)
@@ -564,6 +572,6 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-At the time of writing, ive had booted it up and plugged the Vagrants automatically generated `NAT` for Network Adapter 2, and tried some exploits just for testing, but havent got any results to report...   
+At the time of writing, ive had booted it up, unplugged the Vagrant's automatically generated `NAT` adapter, and tried some exploits just for fun and testing, but haven't got any results to report...   
 
 *TODO: Id go for the CUPS, as thats a service im quite familiar with, and know that it has(had) its weaknesses...*
