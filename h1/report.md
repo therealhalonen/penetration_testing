@@ -60,6 +60,25 @@ While these were successful tasks, the story continued to another assignment, th
 
 I highly recommend the episode to anyone interested about Social Engineering!
 
+*Motivated by this episode, i wrote a quick `hello world` payload:*
+```bash
+REM Hello World!
+DELAY 2000
+CTRL-ALT d
+DELAY 1000
+CTRL-ALT t
+DELAY 1500
+STRING echo Hello World!
+ENTER
+STRING echo Hello $(whoami)
+ENTER
+``` 
+Works in Linux desktop.   
+Drops down all windows to show desktop.  
+Opens terminal emulator.   
+Then echoes the given strings.   
+Tested with [Flipper Zero BadUSB](https://docs.flipperzero.one/bad-usb).
+
 ---
 ### a) Asenna Kali virtuaalikoneeseen
 
@@ -211,9 +230,9 @@ After it was created, i didnt boot it up yet, but proceeded to the next assignme
 -   Kalin ja Metasploitablen välillä on host-only network, niin että porttiskannatessa ym. koneet on eristetty intenetistä, mutta ne saavat yhteyden toisiinsa.
 
 I started this assignment as a continuation to previous.   
-There is host-only network mentioned, to be created between Kali and Metasploit, so that Kali would still have access to public internet.  
+There is host-only network mentioned, to be created between Kali and Metasploitable, so that Kali would still have access to public internet.  
 I did this little bit different.  
-As i have Kali and Metasploit 2 virtual machines ready now, i created a new virtual DHCP Server for my upcoming new `Internal network` for VirtualBox, from my Host PC commandline.  
+As i have Kali and Metasploitable 2 virtual machines ready now, i created a new virtual DHCP Server for my upcoming new `Internal network` for VirtualBox, from my Host PC commandline.  
 
 *I did the new `Internal network`, as i didnt want to have any more `host-only adapters` assigned to my Host and still wanted a separate network just for pentesting.   
 I will be using the same virtual network during the rest of the course, if there is no need to have network connection between the Host and the virtual machines*
@@ -266,7 +285,7 @@ eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 All good all good!   
-First i created a working directory, form where i started the Metasploit database and Metasploit Framework console with:   
+First i created a working directory, from where i started the Metasploit database and Metasploit Framework console with:   
 ```bash
 ┌──(kali㉿kali)-[~]
 └─$ mkdir firstday
