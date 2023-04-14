@@ -247,12 +247,21 @@ What i tried, was to create new page, edit existing page and replace them with t
 
 What i ended up doing, was to edit the theme.   
 I replaced the 404.php theme, with the reverse shell code, and added my local ip and port there.     
+
 ![](colddbox_pics/coldboxx_theme_revshell.png)
 
 On my local/attacker machine, i had a listener ready:   
 ![](colddbox_pics/colddbox_kali_listener.png)
 
 As soon as i saved everything and went back to browse the site... It didnt work.
+
+I got an explanation why it didnt work from my class mate [Miljonka](https://github.com/miljonka):
+
+As i tried to get the 404 to show up with:   
+http://192.168.67.4/12431451   
+What i should have done was to go for:    
+http://192.168.67.4/p?=12431451   
+So it would look the site, and give 404 for page not found
 
 I tried to edit the theme of few other pages, until the "comments.php" worked.   
 After editing that file, and browsing from the front page to "comments" i got the reverse shell:      
