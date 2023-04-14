@@ -379,7 +379,7 @@ Tested `<script>alert("Credit card highjacked")</script>` in field, and credit c
 ### A8:2013 Request Forgeries:
 - **Cross-Site Request Forgeries**
 
-**3\. "Basic Get CSRF Exercise"**
+**3\. "Basic Get CSRF Exercise"**   
 ![](res/csrf_3_start.png)
 
 This one was new for me.   
