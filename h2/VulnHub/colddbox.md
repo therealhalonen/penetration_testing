@@ -59,14 +59,14 @@ Nmap done: 1 IP address (1 host up) scanned in 8.90 seconds
 WordPress site running.   
 Proxy is up with Zap, so i browsed to the site: http://192.168.67.4/
 
-![[colddbox_pics/colddbox_index.png]]
+![](colddbox_pics/colddbox_index.png)
 
 There was a "login" page, which is always good.   
 As there was a author of the box/page mentioned, i of course tried that with placeholder password = `password`   
 Intercepted the login, and started fuzzer for the password with wordlist (rockyou because i got all the time there is needed to get through the passes).
 
 https://www.guyit.co.il/guides/bruteforce-a-form-to-get-credentials-with-zap   
-![[colddbox_pics/colddbox_login_intercepted.png]]
+![](colddbox_pics/colddbox_login_intercepted.png)
 
 Got a lot of (false) positives so decided to not proceed with that.   
 
@@ -230,7 +230,7 @@ And found the logins.
 
 Got access to the admin panel:
 
-![[colddbox_pics/colddbox_admin_panel.png]]
+![](colddbox_pics/colddbox_admin_panel.png)
 
 Next i searched the Web for `exploit wordpress 4.1.31` 
 
@@ -247,16 +247,16 @@ What i tried, was to create new page, edit existing page and replace them with t
 
 What i ended up doing, was to edit the theme.   
 I replaced the 404.php theme, with the reverse shell code, and added my local ip and port there.     
-![[colddbox_pics/coldboxx_theme_revshell.png]]
+![](colddbox_pics/coldboxx_theme_revshell.png)
 
 On my local/attacker machine, i had a listener ready:   
-![[colddbox_pics/colddbox_kali_listener.png]]
+![](colddbox_pics/colddbox_kali_listener.png)
 
 As soon as i saved everything and went back to browse the site... It didnt work.
 
 I tried to edit the theme of few other pages, until the "comments.php" worked.   
 After editing that file, and browsing from the front page to "comments" i got the reverse shell:      
-![[colddbox_pics/colddbox_revshell.png]]
+![](colddbox_pics/colddbox_revshell.png)
 
 Next i wanted a real shell, as this is some unstable thing.   
 So from my notes ive gathered from:   
@@ -446,6 +446,6 @@ cat /home/c0ldd/user.txt
 RmVsaWNpZGFkZXMsIHByaW1lciBuaXZlbCBjb25zZWd1aWRvIQ==
 ```
 
-*Total time:
-Active hacking: ~3 h
-Reading and studying: ~4 h
+*Total time:  
+Active hacking: ~3 h  
+Reading and studying: ~4 h*

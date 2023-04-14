@@ -59,7 +59,7 @@ In that folder, i ran:
 ```
 And it started:
 
-![[res/zap_started.png]]   
+![](res/zap_started.png)   
 
 *Note: If not mentioned otherwise, i will use the first option, in persistent sessions*
 
@@ -75,22 +75,22 @@ Zap:
 	- Tools -> Options -> Network -> Local Servers/Proxies -> 
 		- Address: localhost | Port: 8888
 
-![[res/zap_proxy.png]]
+![](res/zap_proxy.png)
 
 - Then created the root certificate:
 	- Tools -> Options -> Network -> Server Certificates -> Generate -> "Yes" -> Save
 
-![[res/zap_gen_cert.png]]
+![](res/zap_gen_cert.png)
 
 Firefox:
 - -> Settings -> Search-> "Certificate" ->  View Certificates... -> Authorities -> (Possibly if exist, delete OWASP Root CA) -> Import -> 'Choose generated .cert' -> \[X] Trust this CA to identify websites. -> Ok -> Ok
 	- Restart Firefox
 
-![[res/firefox_owasp_root_ca.png]]
+![](res/firefox_owasp_root_ca.png)
 
 **Proofs of intercepted HTTPS traffic:**   
 
-![[res/https_intercept_proof.png]]
+![](res/https_intercept_proof.png)
 
 ---
 ## d) Vuohi. [Asenna WebGoat](https://terokarvinen.com/2020/install-webgoat-web-pentest-practice-target/) ja kokeile, että pääset kirjautumaan sisään.
@@ -149,17 +149,17 @@ docker stop webgoat
 
 Double checked that no other sites got proxied, just by surfing to google.com and observing the Zap.
 
-![[res/confirm_proxy.png]]
+![](res/confirm_proxy.png)
 *All was good.*
 
 **Creating user and login in to WebGoat:**   
 http://localhost:8080/WebGoat/login   
 `Register new user`   
 
- ![[res/webgoat_register.png]]   
+ ![](res/webgoat_register.png)   
  
  `Sign up`   
- ![[res/webgoat_logged_in.png]]
+ ![](res/webgoat_logged_in.png)
  
 **And done**
 
@@ -177,7 +177,7 @@ zaproxy
 As the WebGoat was running in localhost:8080/WebGoat and traffic proxied through Zap, i browsed to the `http://localhost:8080/WebGoat/registration`     
 I added a breaking point in Zap to:     
 
-![[res/break_point.png]]   
+![](res/break_point.png)   
 So that it stops if someone does something in a url that matches the `String`.   
 
 In registration i put:    
@@ -185,11 +185,11 @@ In registration i put:
 - Password: easypeasy   
 
 After `Sign up` in WebGoat registration page, i went to Zap and changed the credentials:   
-![[res/new_credentials.png]]
+![](res/new_credentials.png)
 
 Then removed the breaking point, and released the request with `Submit and continue to next breaking point`.   
 After that i saw that it has registered and logged in, with the credentials given from Zap:   
-![[res/user_info.png]]
+![](res/user_info.png)
 
 ---
 ## e) Vauvavuohi. Ratkaise WebGoatista tehtävät "HTTP Basics" ja "Developer tools". Katso vinkit alta.
@@ -199,17 +199,17 @@ After that i saw that it has registered and logged in, with the credentials give
 **HTTP Basics**
 
 **2.& 3. DONE:**   
-![[res/http_basics.png]]
+![](res/http_basics.png)
 
 **Developer tools:**
 
 **4\.**   
-![[res/developer_tools_4.png]]
+![](res/developer_tools_4.png)
 
 6\.   
-![[res/developer_tools_6_1.png]]
+![](res/developer_tools_6_1.png)
 
-![[res/developer_tools_62.png]]
+![](res/developer_tools_62.png)
 
 ---
 ## f) SELECT * FROM student. Ratkaise [SQLZoo:sta](https://sqlzoo.net/wiki/SQL_Tutorial): 
@@ -269,60 +269,60 @@ SELECT name, population FROM world
 - **SQL Injection (intro)**
 
 **2\. What is SQL?**    
-![[res/sqli_2.png]]
+![](res/sqli_2.png)
 
 **3\. Data Manipulation Language (DML)**   
-![[res/sqli_3.png]]
+![](res/sqli_3.png)
 
 **4\. Data Definition Language (DDL)**      
-![[res/sqli_4.png]]
+![](res/sqli_4.png)
 
 **5\. Data Control Language (DCL)**    
 `GRANT ALL ON grant_rights TO unauthorized_user`    
-![[res/sqli_5.png]]
+![](res/sqli_5.png)
 
 **9\. Try It! String SQL injection**     
-![[res/sqli_9.png]]
+![](res/sqli_9.png)
 
 **10\. Try It! Numeric SQL injection**     
-![[res/sqli_10.png]]
+![](res/sqli_10.png)
 
 **11\. Compromising confidentiality with String SQL injection**  
 - Employee Name: Anything  
 - Authentication TAN: `' OR '1' = '1`  
 
-![[res/sqli_11.png]]
+![](res/sqli_11.png)
 
 **12\. Compromising Integrity with Query chaining**  
 ```sql
 'OR '1' = '1'; UPDATE employees SET SALARY = 100000 WHERE LAST_NAME = 'Smith
 ```
 
-![[res/sqli_12.png]]
+![](res/sqli_12.png)
 
 **13\. Compromising Availability**  
 ```sql
 %'; DROP TABLE access_log;--
 ```
 
-![[res/sql_13.png]]
+![](res/sql_13.png)
 
 **SQL Injection (intro), suoritettuna:**  
-![[res/sqli_finished.png]]
+![](res/sqli_finished.png)
 
 ---
 ### A2 Broken authentication:
 - **Authentication bypasses:**    
 
 **2\. 2FA Password Reset**  
-![[res/2FA_start.png]]
+![](res/2FA_start.png)
 
 Okey Dokey. This one i think i havent done before...   
 But first to test what happens with tests:     
-![[res/2fa_1.png]]
+![](res/2fa_1.png)
 
 Then to check in Zap:   
-![[res/2fa_2.png]]
+![](res/2fa_2.png)
 
 Okay, so as it showed in the description and in the Request, the authentication is made with "SEC_QUESTIONS" so i made my own variables.  
 In Manual Request Editor:   
@@ -330,7 +330,7 @@ In Manual Request Editor:
 secQuestionWhatever=test_teacher&secQuestionsAnotherOne=test_street&jsEnabled=1&verifyMethod=SEC_QUESTIONS&userId=12309746
 ```
 And Send:   
-![[res/2fa_3.png]]
+![](res/2fa_3.png)
 
 **BOOOOOM!**
 
@@ -339,52 +339,52 @@ And Send:
 - **Insecure Login:**
 
 **2\. Let's try**  
-![[res/insecure_login_start.png]]
+![](res/insecure_login_start.png)
 
 So, i did a test submit again.   
 In Zap, nothing useful was found... Atleast for me.  
 OR! I misread, i needed to click the Log In, not Submit.   
 After that i found:
 
-![[res/A3_1.png]]
+![](res/A3_1.png)
 
 **Muaahahahaaaa!**   
 With those credentials:   
 
-![[res/A3_2.png]]
+![](res/A3_2.png)
 
 ---
 ### A7 Cross Site Scripting (XSS): Cross site scripting
 
 **2\. What is XSS?**  
-![[res/XSS_start.png]]
+![](res/XSS_start.png)
 
 This one was fun.
 So i opened 2 tabs, side by side, had to `allow pasting` in console, and enter the given `alert(document.cookie);`   
-![[res/A3_3.png]]
+![](res/A3_3.png)
 
 Both had the same cookies:     
-![[res/A3_4.png]]
+![](res/A3_4.png)
 
 
 **7\. Try It! Reflected XSS**  
 
-![[res/XSS_7_start.png]]
+![](res/XSS_7_start.png)
 
 Hahaaa!
 Tested `<script>alert("Credit card highjacked")</script>` in field, and credit card field gave the `alert` popup.  
-![[res/A3_5.png]]
+![](res/A3_5.png)
 
 ---
 ### A8:2013 Request Forgeries:
 - **Cross-Site Request Forgeries**
 
 **3\. "Basic Get CSRF Exercise"**
-![[res/csrf_3_start.png]]
+![](res/csrf_3_start.png)
 
 This one was new for me.   
 Submit Query, gave this:   
-![[res/A8_1.png]]
+![](res/A8_1.png)
 
 I had to check the tips...   
 So i made myself a copy of the form, a simple local .html file:   
@@ -402,10 +402,10 @@ So i made myself a copy of the form, a simple local .html file:
 Which when opened in browser, and pressing "submit" lead to:  
 `file:///WebGoat/csrf/basic-get-flag` = Not Found   
 So i tinkered it to lead to the absolute path, by assigning the `action` to `http://localhost:8080/WebGoat/csrf/basic-get-flag` aaaaaand:   
-![[res/A8_2.png]]
+![](res/A8_2.png)
 
 Now i had the flag and inputted it to where the assignment said and:       
-![[res/A8_3.png]]
+![](res/A8_3.png)
 
 **Profit!**
 
@@ -427,14 +427,14 @@ Made a copy of the form, and straight editing the "action" to point to the right
 ```
 
 Opening this in the browser window:   
-![[res/A8_4.png]]
+![](res/A8_4.png)
 
 And submitting the review:   
-![[res/A8_5.png]]
+![](res/A8_5.png)
 
 Worked!   
 And proofs:   
-![[res/A8_6.png]]
+![](res/A8_6.png)
 
 
 ---
@@ -452,4 +452,4 @@ During these 2 weeks, that was the time limit for these assignments, i managed t
 
 [My Profile](https://app.hackthebox.com/users/1229016)   
 Proofs:   
-![[res/htb_progress.png]]
+![](res/htb_progress.png)
