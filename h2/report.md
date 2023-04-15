@@ -222,44 +222,59 @@ After that i saw that it has registered and logged in, with the credentials give
 SELECT population FROM world
   WHERE name = 'Germany';
 ```
+![](res/sqlzoo_1.png)
+
 2\.
 ```sql
 SELECT name, population FROM world
   WHERE name IN ('Sweden', 'Norway', 'Denmark');
 ```
+![](res/sqlzoo_2.png)
+
 3\.
 ```sql
 SELECT name, area FROM world
   WHERE area BETWEEN 200000 AND 250000;
 ```
+![](res/sqlzoo_3.png)
 
 
 ### [2 SELECT from World](https://sqlzoo.net/wiki/SELECT_from_WORLD_Tutorial) kohdat 1-5.
 
 1\.
 ```sql
-SELECT name, continent, population FROM world
+SELECT name, continent, population FROM world;
 ```
+![](res/sqlzoo_w1.png)
+
 2\.
 ```sql
 SELECT name FROM world
 WHERE population >= 200000000;
 ```
+![](res/sqlzoo_w2.png)
+
 3\.
 ```sql
 SELECT name, GDP/population FROM world
 WHERE population >= 200000000;
 ```
+![](res/sqlzoo_w3.png)
+
 4\.
 ```sql
 SELECT name, population/1000000 FROM world 
 WHERE continent = 'South America';
 ```
+![](res/sqlzoo_w4.png)
+
 5\.
 ```sql
 SELECT name, population FROM world 
  WHERE name IN ('France', 'Germany', 'Italy');
 ```
+![](res/sqlzoo_w5.png)
+
 
 ---
 ## g) Ratkaise WebGoatista:
