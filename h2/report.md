@@ -293,13 +293,15 @@ SELECT name, population FROM world
 ![](res/sqli_4.png)
 
 **5\. Data Control Language (DCL)**    
-`GRANT ALL ON grant_rights TO unauthorized_user`    
-![](res/sqli_5.png)
+![](res/sqli_5-1.png)
 
 **9\. Try It! String SQL injection**     
 ![](res/sqli_9.png)
 
-**10\. Try It! Numeric SQL injection**     
+**10\. Try It! Numeric SQL injection**    
+
+Login_Count: 1    
+User_Id: 0 OR 1 = 1    
 ![](res/sqli_10.png)
 
 **11\. Compromising confidentiality with String SQL injection**  
