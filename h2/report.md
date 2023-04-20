@@ -300,8 +300,8 @@ SELECT name, population FROM world
 
 **10\. Try It! Numeric SQL injection**    
 
-Login_Count: 1    
-User_Id: 0 OR 1 = 1    
+Login_Count: `1`    
+User_Id: `0 OR 1 = 1`    
 ![](res/sqli_10.png)
 
 **11\. Compromising confidentiality with String SQL injection**  
