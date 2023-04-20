@@ -372,10 +372,10 @@ A reverse shell is a type of shell in which the target machine communicates back
 
 - They are used to gain access to a target machine and maintain persistence, as they allow the attacker to bypass firewalls and other security measures that might be in place. They can also be used to ex-filtrate data from the target machine.
 
-Sources:
+Sources:   
 Niko Heiskanen [Himself](https://heiskanen.rocks/)   
 [Many of IppSec's videos](https://www.youtube.com/@ippsec/search?query=reverse%20shell)   
-["Reverse Shell Cheat Sheet" by Pentest Monkey](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)   
+["Reverse Shell Cheat Sheet" by Pentest Monkey](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)   
 
 The one i needed to make a whole `.php` site.   
 https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
@@ -626,7 +626,7 @@ zsh: suspended  nc -nlvp 9002
 alex@squashed:/$ export TERM=xterm
 ```
 Sources for "improved shell":    
-Niko Heiskanen himself.   
+Niko Heiskanen [Himself](https://heiskanen.rocks/)       
 [Many of IppSec's videos](https://www.youtube.com/@ippsec/search?query=improved%20shell)   
 
 
