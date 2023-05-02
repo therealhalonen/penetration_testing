@@ -156,11 +156,16 @@ Now i had the idea :D
 ```
 Hi Specialist,
 
-I wanted to let you know that we have finalized the new Excel spreadsheet that will be extremely helpful for the payroll management process. We have included macros that enable easy filtering of data between sheets, saving you and your team's valuable time.
+I wanted to let you know that we have finalized the new Excel spreadsheet that will be extremely helpful for the payroll management process. 
+We have included macros that enable easy filtering of data between sheets, saving you and your team's valuable time.
 
-As a valued member of the payroll department, your expertise and time are crucial to the success of the company. That's why we designed this tool with your needs in mind, to help make your job easier and more efficient. We are confident that once you try it out, you'll see just how much it can improve your workflow.
+As a valued member of the payroll department, your expertise and time are crucial to the success of the company. 
+That's why we designed this tool with your needs in mind, to help make your job easier and more efficient. 
+We are confident that once you try it out, you'll see just how much it can improve your workflow.
 
-The macros in this spreadsheet will allow you to perform functions that are not currently possible with our default software, giving us a competitive edge and making your job much easier. As we understand that timely and accurate payroll management is the priority, we believe, that with this tool 
+The macros in this spreadsheet will allow you to perform functions that are not currently possible with our default software, 
+giving us a competitive edge and making your job much easier. 
+As we understand that timely and accurate payroll management is the priority, we believe, that with this tool 
 our goals are achieved way faster.
 
 We encourage you to give it a try asap, as we have got a good feedback from similar tools before from other departments.
@@ -234,7 +239,7 @@ I tested the NULLS
 '+UNION+SELECT+NULL,NULL--
 '+UNION+SELECT+NULL,NULL,NULL--
 ```
-*When the number of nulls matches the number of columns, the database returns an additional row in the result set, containing null values in each column. ([PortSwigger - SQLI: Union attacks](https://portswigger.net/web-security/sql-injection/union-attacks)) *
+*When the number of nulls matches the number of columns, the database returns an additional row in the result set, containing null values in each column. ([PortSwigger - SQLI: Union attacks](https://portswigger.net/web-security/sql-injection/union-attacks))*
 
 ![](res/portSwigLab-6.png)
 
