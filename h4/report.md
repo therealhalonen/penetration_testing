@@ -182,16 +182,13 @@ Mr Me, IT Department
 1.  Authority
 	- Claims to be from a member of the IT department, which could give the impression of authority and/or the feeling of trust as its created by experts of the their field.
     
-2.  Urgency
-	- Convinces that the new tool is essential for efficient and accurate payroll management, creating a sense of urgency.
-    
-3.  Scarcity
+2.  Scarcity
 	- Hints that the new tool could be exclusive, as there are tasks it can do, that the default software used, can not, creating a sense of scarcity and desirability.
     
-4.  Social proof: 
+3.  Social proof: 
 	- Suggests that someone has used similar tool and found it to be helpful.
 
-5. Liking/Unity:
+4. Liking/Unity:
 	- Builds a trust and similarities.
 	- Changes to "We/Us"
 
