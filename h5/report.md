@@ -1,4 +1,4 @@
-# h5
+# h5 Final Countdown
 *Hacking, Cracking, Fuzzing...*   
 
 Host:  
@@ -72,7 +72,7 @@ Which I've modified and added stuff to serve my needs.
 
 Other sources used:   
 [Kali Tools](https://www.kali.org/tools/)   
-[Tero Karvinen - Himself](https://terokarvinen.com/2023/tunkeutumistestaus-2023-kevat/)
+[Tero Karvinen - Himself](https://terokarvinen.com/2023/tunkeutumistestaus-2023-kevat/)   
 [Terokarvinen.com - Fuzz Urls to Find Hidden Directories](https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/)   
 [Joohoi - Ffuf](https://github.com/ffuf/ffuf)   
 [Niko Heiskanen Himself](https://heiskanen.rocks/)     
@@ -644,7 +644,7 @@ So the password is: **MasterLazerman**
 ---
 ### e) Valitse 2: Ratkaise kaksi itse valitsemaasi tehtävää [PortSwigger labs](https://portswigger.net/web-security/all-labs) -sivulta. Tietysti sellaisia, jotka eivät ole olleet vielä läksynä.
 
-**1\. Lab: Server-side template injection in a sandboxed environment**
+**1\.[ Lab: Server-side template injection in a sandboxed environment**](https://portswigger.net/web-security/server-side-template-injection/exploiting/lab-server-side-template-injection-in-a-sandboxed-environment)
 
 ![](res/PortSwigLab.png)   
 *I chose this, as ive done some similar stuff to Flask, before.*
