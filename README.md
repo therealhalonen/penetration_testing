@@ -8,4 +8,4 @@ Homeworks and stuff, for the course [Penetration Testing - Tunkeutumistestaus by
 [h4 Sequel fish](h4/report.md)
 [h5 Final Countdown](h5/report.md)
 
-[**Pentest Cheatsheet**](h5/personal_cheatsheet)
+[**Pentest Cheatsheet**](h5/personal_cheatsheet.md)
