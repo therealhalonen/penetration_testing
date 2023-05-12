@@ -89,6 +89,45 @@ Usernames in Hashfile: --username
 john --wordlist=/path/file hash.file
 ```
 
+**Wordlist Gen:**
+
+**Cewl**
+```bash
+cewl -w wordlist <url>
+```
+
+**Crunch**
+```bash
+TBA
+```
+
+**From a file:**
+**Python Script**
+```bash
+#!/bin/python3
+import sys
+import re
+
+if len(sys.argv) != 2:
+    print("Usage: wordlist_gen <filename>")
+    sys.exit(1)
+
+filename = sys.argv[1]
+
+with open(filename, "r") as file:
+    for line in file:
+        # Replace non-alphanumeric characters with space
+        line = re.sub(r"[^\w\s]", " ", line)
+        # Split line into words and iterate over them
+        for word in line.split():
+            print(word)
+```
+
+**Sed**
+```bash
+sed 's/[^a-zA-Z0-9 ]//g; s/ /\n/g; /^$/d' <filename> | tr -s '\n'
+```
+
 ---
 **PrivEsc stuffz:**
 ```bash
