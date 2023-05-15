@@ -52,6 +52,7 @@ Tasks: -T
 Example: searchsploit SOMETHING
 Read Exploit: -x
 Copy to current location: -m
+Update: -u
 ```
 
 **SQLi Cheatsheet:** 
