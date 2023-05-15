@@ -1,5 +1,5 @@
 ### My current Pentest Cheatsheet   
-Updated: *11.05.2023*   
+Updated: *15.05.2023*   
 [See sources and credits](report.md#y-the-super-ultimate-hakk3r-che33tsheet-001-tee-tiivistelm%C3%A4-omista-ja-kavereiden-parhaista-tunketumistekniikoista-ole-t%C3%A4sm%C3%A4llinen-liit%C3%A4-komennot-mukaan-t%C3%A4m%C3%A4n-kohdan-vastaus-lienee-pidempi-kuin-aiempien-x-teht%C3%A4vien-viittaa-l%C3%A4hteisiin-t%C3%A4ss%C3%A4-alakohdassa-ei-tarvitse-ajaa-komentoja-tietokoneella)
 
 **Nmap:**
@@ -9,7 +9,7 @@ Everything: -A
 Enumerate Versions: -sV
 Default Scripts: -sC
 Syn Scan: -sS
-All Ports: -p-
+All Ports: -p0-
 Output (All Formats): -oA filename
 ```
 
