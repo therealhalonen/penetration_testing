@@ -4,7 +4,7 @@ Updated: *11.05.2023*
 
 **Nmap:**
 ```bash
-Example: nmap -A -p- <address> -oA filename 
+Example: sudo nmap -A -p- <address> -oA filename 
 Everything: -A
 Enumerate Versions: -sV
 Default Scripts: -sC
