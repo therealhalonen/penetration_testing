@@ -138,7 +138,7 @@ Find SUID: find / -perm -4000
 Find GUID: find / -perm -2000
 Listening Ports: netstat -tulnp
 Listening Ports: ss -ltnp
-Find World Readable: find / -perm -o+w
+Find World Writeable: find / -perm -o+w
 ```
 **Find**
 - Disable "permission denied and stuffs" printing:   
