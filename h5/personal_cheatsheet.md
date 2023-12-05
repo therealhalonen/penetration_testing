@@ -1,5 +1,5 @@
 ### My current Pentest Cheatsheet   
-Updated: *15.05.2023*   
+Updated: *05.12.2023*   
 [See sources and credits](report.md#y-the-super-ultimate-hakk3r-che33tsheet-001-tee-tiivistelm%C3%A4-omista-ja-kavereiden-parhaista-tunketumistekniikoista-ole-t%C3%A4sm%C3%A4llinen-liit%C3%A4-komennot-mukaan-t%C3%A4m%C3%A4n-kohdan-vastaus-lienee-pidempi-kuin-aiempien-x-teht%C3%A4vien-viittaa-l%C3%A4hteisiin-t%C3%A4ss%C3%A4-alakohdassa-ei-tarvitse-ajaa-komentoja-tietokoneella)
 
 **Nmap:**
@@ -176,7 +176,7 @@ Host, netcat listener:
 nc -lvnp PORTNUMBER  
 ```
 Shells:   
-pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet   
+https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet   
 https://wiremask.eu/writeups/reverse-shell-on-a-nodejs-application/
 
 ---
